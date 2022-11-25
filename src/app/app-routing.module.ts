@@ -12,6 +12,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { UserComponent } from './components/user/user.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CatFactsComponent } from './components/cat-facts/cat-facts.component';
+import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -32,9 +33,29 @@ import { UserServiceModule } from './services/user.service-module';
 import { ProductDetailComponentModule } from './components/product-detail/product-detail.component-module';
 import { CatFactsComponentModule } from './components/cat-facts/cat-facts.component-module';
 import { CatFactsServiceModule } from './services/cat-facts.service-module';
+import { AgePredictionComponentModule } from './components/age-prediction/age-prediction.component-module';
+import { AgePredictionServiceModule } from './services/age-prediction.service-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'products', component: ProductListComponent }, { path: 'categories', component: CategoryListComponent }, { path: 'crypto', component: CryptoListComponent }, { path: 'public-holidays', component: PublicHolidaysListComponent }, { path: 'checkbox-categories', component: CheckboxCategoryListComponent }, { path: 'categories-menu', component: CategoriesMenuComponent }, { path: 'create-employee', component: EmployeeFormComponent }, { path: 'create-product', component: ProductFormComponent }, { path: 'login', component: LoginFormComponent }, { path: 'register', component: UserComponent }, { path: 'product/:id', component: ProductDetailComponent }, { path: 'cat-fact', component: CatFactsComponent }]), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoryServiceModule, CryptoListComponentModule, CryptoServiceModule, PublicHolidaysListComponentModule, PublicHolidaysServiceModule, CheckboxCategoryListComponentModule, CategoriesMenuComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeeServiceModule, LoginFormComponentModule, LoginServiceModule, UserComponentModule, UserServiceModule, ProductDetailComponentModule, CatFactsComponentModule, CatFactsServiceModule],
+  imports: [RouterModule.forRoot([{
+    path: 'products', component: ProductListComponent }, {
+    path: 'categories', component: CategoryListComponent }, {
+    path: 'crypto', component: CryptoListComponent }, {
+    path: 'public-holidays', component: PublicHolidaysListComponent }, {
+    path: 'checkbox-categories', component: CheckboxCategoryListComponent }, {
+    path: 'categories-menu', component: CategoriesMenuComponent }, {
+    path: 'create-employee', component: EmployeeFormComponent }, {
+    path: 'create-product', component: ProductFormComponent }, {
+    path: 'login', component: LoginFormComponent }, {
+    path: 'register', component: UserComponent }, {
+    path: 'product/:id', component: ProductDetailComponent }, {
+    path: 'cat-fact', component: CatFactsComponent }, {
+    path: 'age/:name', component: AgePredictionComponent }]),
+    ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoryServiceModule, CryptoListComponentModule,
+    CryptoServiceModule, PublicHolidaysListComponentModule, PublicHolidaysServiceModule, CheckboxCategoryListComponentModule,
+    CategoriesMenuComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeeServiceModule, LoginFormComponentModule,
+    LoginServiceModule, UserComponentModule, UserServiceModule, ProductDetailComponentModule, CatFactsComponentModule, CatFactsServiceModule,
+    AgePredictionComponentModule, AgePredictionServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
