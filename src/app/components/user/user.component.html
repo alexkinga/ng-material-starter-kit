@@ -1,0 +1,71 @@
+<form [formGroup]="form" (ngSubmit)="onRegisterFormSubmitted(form)">
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="text" placeholder="Email" formControlName="email" required>
+      <mat-error *ngIf="form.get('email')!.invalid">email is invalid</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput type="text" placeholder="Username" formControlName="username" required>
+      <mat-error *ngIf="form.get('username')!.invalid">username is invalid</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Password" formControlName="password" required>
+      <mat-error *ngIf="form.get('password')!.invalid">password is invalid</mat-error>
+    </mat-form-field>
+  </div>
+  <div formGroupName="name">
+    <mat-form-field appearance="fill">
+      <mat-label>Firstname</mat-label>
+      <input matInput type="text" placeholder="Firstname" formControlName="firstname" required>
+      <mat-error *ngIf="form.get('name')!.invalid">Firstname is invalid</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Lastname</mat-label>
+      <input matInput type="text" placeholder="Lastname" formControlName="lastname" required>
+      <mat-error *ngIf="form.get('name')!.invalid">Lastname is invalid</mat-error>
+    </mat-form-field>
+  </div>
+  <div formGroupName="address">
+    <mat-form-field appearance="fill">
+      <mat-label>Street</mat-label>
+      <input matInput type="text" placeholder="Street" formControlName="street" required>
+      <mat-error *ngIf="form.get('address')!.invalid">Street is invalid</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Zipcode</mat-label>
+      <input matInput type="text" placeholder="Zipcode" formControlName="zipcode" required>
+      <mat-error *ngIf="form.get('address')!.invalid">Zipcode is invalid</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Number</mat-label>
+      <input matInput type="text" placeholder="Number" formControlName="number" required>
+      <mat-error *ngIf="form.get('address')!.invalid">Number is invalid</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>City</mat-label>
+      <input matInput type="text" placeholder="City" formControlName="city" required>
+      <mat-error *ngIf="form.get('address')!.invalid">City is invalid</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput type="text" placeholder="Phone" formControlName="phone" required>
+      <mat-error *ngIf="form.get('phone')!.invalid">phone is invalid</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+  </div>
+</form>
