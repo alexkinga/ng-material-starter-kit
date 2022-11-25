@@ -24,7 +24,4 @@ export class ProductFormComponent {
       image: products.get('image')?.value
     }).subscribe();
   }
-
-  onFormSubmitted(form: FormGroup): void {
-  }
 }
