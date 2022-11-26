@@ -97,6 +97,10 @@
     "user": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "<h1>$name$</h1>\n<p>$email$</p>"
+    },
+    "random-joke": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "<h1>$setup$</h1>\n<p>$punchline$</p>"
     }
   }
 }
